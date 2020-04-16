@@ -1,1 +1,41 @@
 
+Week 9 Homework Part 2: Questions
+What is the Web Storage API?
+
+What data storage was used before HTML5 was introduced? What was the data storage called and what was it included in?
+
+What are 3 advantages of using the Web Storage API over cookies?
+
+What are the two objects called for storing data on the client that HTML5 Web Storage provides?
+
+Can localStorage and sessionStorage be read server-side?
+
+Which data item can be read server-side? Why is it popular? What is it used mostly for? And what kind of data might it contain?
+
+Why do cookies have to be well secured and protected?
+
+What is the httpOnly flag good for? And what does it help mitigate the negative impact of, for example?
+
+What are localStorage and sessionStorage of the Web Storage API connected to? And what does that connection make possible for pages from the same origin to do?
+
+What does the Storage Interface of the Web Storage API permit?
+
+The Storage Object, represented by the localStorage and sessionStorage objects, contains one property. What is that property called and what does it return? Use your project application to describe what this property does.
+
+Give me the five Storage methods of the Web Storage API and describe what each does. When applicable, use code from your project application as examples.
+
+When using cookies, why would you want to use the Secure flag?
+
+What is the difference between localStorage and sessionStorage?
+
+What are the similarities between localStorage and sessionStorage?
+
+Explain what try...catch is and what it does.
+
+Why do we have to set a try...catch statement in our application? Refer to your/this homework README.md for the answer.
+
+Explain what JSON.stringify() does and provide an example using code from your project application.
+
+Describe what the value of the csv variable is and why it is important for our application.
+
+Please copy and paste the result of the console.log(csv) after you have clicked on the Save Text To File For Download button. Hint: you should try this out only after you have completed building your application.
