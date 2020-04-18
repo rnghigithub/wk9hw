@@ -12,28 +12,50 @@ What was the data storage called and what was it included in?
 
 3. What are 3 advantages of using the Web Storage API over cookies?
 
-4. What are the two objects called for storing data on the client that HTML5 Web Storage provides?
+4. 
+- localStorage And sessionStorage
 
-5. Can localStorage and sessionStorage be read server-side?
+5. 
+- localStorage and sessionStorage can only be read client-side
 
 6. Which data item can be read server-side? Why is it popular? What is it used mostly for? And what kind of data might it contain?
 
 7.
 - Cookies allow sites to store user data directly into the user's browser. This are majority used to identify the session, allowing the Web
-server to reconize the user navigating through the site and may contain sensitive data.
+server to recognize the user navigating through the site and may contain sensitive data.
 
 8. 
 - the httpOnly flag is good for blocking access of a cookie from client side and JavaScript coded. It mitigates the negative 
 impact of an XSS (Cross Site Scripting) 
 
-9. What are localStorage and sessionStorage of the Web Storage API connected to? And what does that connection make possible for pages from the same origin to do?
+9. What are localStorage and sessionStorage of the Web Storage API connected to?
+ And what does that connection make possible for pages from the same origin to do?
 
-10. 
+10. -
 - permits you to set, retrieve and remove data for a specific domain and storage type. 
 
-11. The Storage Object, represented by the localStorage and sessionStorage objects, contains one property. What is that property called and what does it return? Use your project application to describe what this property does.
+11. The Storage Object, represented by the localStorage and sessionStorage objects, contains one property.
+ What is that property called and what does it return? Use your project application to describe 
+ what this property does.
 
-12. Give me the five Storage methods of the Web Storage API and describe what each does. When applicable, use code from your project application as examples.
+12. Give me the five Storage methods of the Web Storage API and describe what each does. 
+When applicable, use code from your project application as examples.
+ 
+ - Storage.clear() : when invoked, will empty all keys out of storage
+    ex.
+ 
+ - Storage.removeItem() : when passed a key name will remove that key from the storage. If not iten is associated with the given 
+ key than this method will do nothing
+    ex.
+
+ - Storage.setItem() : when passed a key name and value will add that key to the storage/update that key's value if it already exists.       
+    ex. 
+
+ - Storage.getItem() : when passed a key name will return that key's value or null is the key is non-existent
+   ex.
+
+- Storage.key() : when passed a certain number represented by n, this method returns the name of the nth key in the storage.
+    ex.      
 
 13.
 - The secure flag attribute allows you to forbid a cookie to be transmitted over HTTP. It will only be transmitted through HTTPS. 
