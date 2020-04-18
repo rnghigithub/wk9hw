@@ -1,9 +1,14 @@
 
 ## Week 9 Homework Part 2: Questions
 
-1. What is the Web Storage API?
+1. 
+    - permits applications to store data within an individual user's browser.
 
-2. What data storage was used before HTML5 was introduced? What was the data storage called and what was it included in?
+2. What data storage was used before HTML5 was introduced? 
+What was the data storage called and what was it included in?
+- Before HTML5 application data was stored in cookies, included in each server request.
+- 
+
 
 3. What are 3 advantages of using the Web Storage API over cookies?
 
@@ -13,19 +18,25 @@
 
 6. Which data item can be read server-side? Why is it popular? What is it used mostly for? And what kind of data might it contain?
 
-7. Why do cookies have to be well secured and protected?
+7.
+- Cookies allow sites to store user data directly into the user's browser. This are majority used to identify the session, allowing the Web
+server to reconize the user navigating through the site and may contain sensitive data.
 
-8. What is the httpOnly flag good for? And what does it help mitigate the negative impact of, for example?
+8. 
+- the httpOnly flag is good for blocking access of a cookie from client side and JavaScript coded. It mitigates the negative 
+impact of an XSS (Cross Site Scripting) 
 
 9. What are localStorage and sessionStorage of the Web Storage API connected to? And what does that connection make possible for pages from the same origin to do?
 
-10. What does the Storage Interface of the Web Storage API permit?
+10. 
+- permits you to set, retrieve and remove data for a specific domain and storage type. 
 
 11. The Storage Object, represented by the localStorage and sessionStorage objects, contains one property. What is that property called and what does it return? Use your project application to describe what this property does.
 
 12. Give me the five Storage methods of the Web Storage API and describe what each does. When applicable, use code from your project application as examples.
 
-13. When using cookies, why would you want to use the Secure flag?
+13.
+- The secure flag attribute allows you to forbid a cookie to be transmitted over HTTP. It will only be transmitted through HTTPS. 
 
 14. What is the difference between localStorage and sessionStorage?
 
