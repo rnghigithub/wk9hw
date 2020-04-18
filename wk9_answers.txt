@@ -1,41 +1,42 @@
 
-Week 9 Homework Part 2: Questions
-What is the Web Storage API?
+## Week 9 Homework Part 2: Questions
 
-What data storage was used before HTML5 was introduced? What was the data storage called and what was it included in?
+1. What is the Web Storage API?
 
-What are 3 advantages of using the Web Storage API over cookies?
+2. What data storage was used before HTML5 was introduced? What was the data storage called and what was it included in?
 
-What are the two objects called for storing data on the client that HTML5 Web Storage provides?
+3. What are 3 advantages of using the Web Storage API over cookies?
 
-Can localStorage and sessionStorage be read server-side?
+4. What are the two objects called for storing data on the client that HTML5 Web Storage provides?
 
-Which data item can be read server-side? Why is it popular? What is it used mostly for? And what kind of data might it contain?
+5. Can localStorage and sessionStorage be read server-side?
 
-Why do cookies have to be well secured and protected?
+6. Which data item can be read server-side? Why is it popular? What is it used mostly for? And what kind of data might it contain?
 
-What is the httpOnly flag good for? And what does it help mitigate the negative impact of, for example?
+7. Why do cookies have to be well secured and protected?
 
-What are localStorage and sessionStorage of the Web Storage API connected to? And what does that connection make possible for pages from the same origin to do?
+8. What is the httpOnly flag good for? And what does it help mitigate the negative impact of, for example?
 
-What does the Storage Interface of the Web Storage API permit?
+9. What are localStorage and sessionStorage of the Web Storage API connected to? And what does that connection make possible for pages from the same origin to do?
 
-The Storage Object, represented by the localStorage and sessionStorage objects, contains one property. What is that property called and what does it return? Use your project application to describe what this property does.
+10. What does the Storage Interface of the Web Storage API permit?
 
-Give me the five Storage methods of the Web Storage API and describe what each does. When applicable, use code from your project application as examples.
+11. The Storage Object, represented by the localStorage and sessionStorage objects, contains one property. What is that property called and what does it return? Use your project application to describe what this property does.
 
-When using cookies, why would you want to use the Secure flag?
+12. Give me the five Storage methods of the Web Storage API and describe what each does. When applicable, use code from your project application as examples.
 
-What is the difference between localStorage and sessionStorage?
+13. When using cookies, why would you want to use the Secure flag?
 
-What are the similarities between localStorage and sessionStorage?
+14. What is the difference between localStorage and sessionStorage?
 
-Explain what try...catch is and what it does.
+15. What are the similarities between localStorage and sessionStorage?
 
-Why do we have to set a try...catch statement in our application? Refer to your/this homework README.md for the answer.
+16. Explain what try...catch is and what it does.
 
-Explain what JSON.stringify() does and provide an example using code from your project application.
+17. Why do we have to set a try...catch statement in our application? Refer to your/this homework README.md for the answer.
 
-Describe what the value of the csv variable is and why it is important for our application.
+18. Explain what JSON.stringify() does and provide an example using code from your project application.
 
-Please copy and paste the result of the console.log(csv) after you have clicked on the Save Text To File For Download button. Hint: you should try this out only after you have completed building your application.
+19. Describe what the value of the csv variable is and why it is important for our application.
+
+20. Please copy and paste the result of the console.log(csv) after you have clicked on the Save Text To File For Download button. Hint: you should try this out only after you have completed building your application.
