@@ -71,9 +71,11 @@ exception is thrown.
 17. 
 - If there is a sessionStorage support, the program steps into the else statement. 
 There we set and get our sessionStorage with checking if we have exceeded the sessionStorage quota. 
-Because the exception needs to be catched the try...catch statement must be used.
+Because the exception needs to be catched. the try...catch statement must be used.
 
-18. Explain what JSON.stringify() does and provide an example using code from your project application.
+18. 
+- JSON.stringify() method converts a JavaScript object or value to a JSON string. 
+const csv = JSON.stringify(sessionStorage['autosave']);
 
 19. Describe what the value of the csv variable is and why it is important for our application.
 
