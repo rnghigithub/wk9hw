@@ -61,9 +61,24 @@ When applicable, use code from your project application as examples.
 13.
 - The secure flag attribute allows you to forbid a cookie to be transmitted over HTTP. It will only be transmitted through HTTPS. 
 
-14. What is the difference between localStorage and sessionStorage?
+14. 
+- sessionStorage
+   - Maintains storage in the applications tab in Chrome Developer tools, in Inspector tab then storage tab of the Firefox Developer Tools,
+     storage tab of the JavaScript console in Safari
+   - Data is available for the duration of the page session when it opens,including when a page reloads/refreshes
+   - Stores data only for the session until closed.
+   - Storage limit is larger than a cookie, max 5MB.
+
+- localStorage       
+ - Data is stored with no expiration date by default. Can only be cleared using JavaScript, clear browser cache or localStorage itself
+   in the browser console.
+ - Storage limit is max 10MB vs session and cookies   
 
 15. What are the similarities between localStorage and sessionStorage?
+- Data is never transferred to the server
+- Storage limits are larger than cookies
+
+
 
 16. 
 - try...catch statement marks a block of statements to try out code and specifics a response if an 
