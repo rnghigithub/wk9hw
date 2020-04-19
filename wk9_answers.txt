@@ -2,12 +2,10 @@
 ## Week 9 Homework Part 2: Questions
 
 1. 
-    - permits applications to store data within an individual user's browser.
+ - permits applications to store data within an individual user's browser.
 
-2. What data storage was used before HTML5 was introduced? 
-What was the data storage called and what was it included in?
+2. 
 - Before HTML5 application data was stored in cookies, included in each server request.
-- 
 
 
 3. What are 3 advantages of using the Web Storage API over cookies?
@@ -18,11 +16,14 @@ What was the data storage called and what was it included in?
 5. 
 - localStorage and sessionStorage can only be read client-side
 
-6. Which data item can be read server-side? Why is it popular? What is it used mostly for? And what kind of data might it contain?
+6. 
+ - cookies can be read server side. 
+ -They are popular because they allow sites to store user data directly into the user's browser.
+ - mostly used to identify a user's session.
+ -It may contain sensitive data.
 
 7.
-- Cookies allow sites to store user data directly into the user's browser. This are majority used to identify the session, allowing the Web
-server to recognize the user navigating through the site and may contain sensitive data.
+- Cookies may contain sensitive data.
 
 8. 
 - the httpOnly flag is good for blocking access of a cookie from client side and JavaScript coded. It mitigates the negative 
