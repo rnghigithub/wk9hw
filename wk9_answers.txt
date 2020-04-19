@@ -64,9 +64,14 @@ When applicable, use code from your project application as examples.
 
 15. What are the similarities between localStorage and sessionStorage?
 
-16. Explain what try...catch is and what it does.
+16. 
+- try...catch statement marks a block of statements to try out code and specifics a response if an 
+exception is thrown.
 
-17. Why do we have to set a try...catch statement in our application? Refer to your/this homework README.md for the answer.
+17. 
+- If there is a sessionStorage support, the program steps into the else statement. 
+There we set and get our sessionStorage with checking if we have exceeded the sessionStorage quota. 
+Because the exception needs to be catched the try...catch statement must be used.
 
 18. Explain what JSON.stringify() does and provide an example using code from your project application.
 
