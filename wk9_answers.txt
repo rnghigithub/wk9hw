@@ -7,8 +7,8 @@
 2. 
 - Before HTML5 application data was stored in cookies, included in each server request.
 
-
-3. What are 3 advantages of using the Web Storage API over cookies?
+3. 
+- it provides for the addition, modification, deletion of stored data items. 
 
 4. 
 - localStorage And sessionStorage
@@ -32,7 +32,7 @@ impact of an XSS (Cross Site Scripting)
 9. What are localStorage and sessionStorage of the Web Storage API connected to?
  And what does that connection make possible for pages from the same origin to do?
 
-10. -
+10. 
 - permits you to set, retrieve and remove data for a specific domain and storage type. 
 
 11. The Storage Object, represented by the localStorage and sessionStorage objects, contains one property.
