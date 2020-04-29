@@ -15,17 +15,24 @@
             <h1 class="title">Note Taker To Session Storage App</h1>
             <div class="storage-buttons">
                 <a class="clear">Clear Storage</a>
-                <a class="empty">Empty Storage</a>
+                    <button id="clearStorage" type="button"> Clear Storage </button>
+                <a class="empty">Empty Storage</a>   
+                    <button id="emptyStorage" type="button"> Empty Storage</button>
             </div>
             <div id="storage-quota-msg"></div>
             <div class="file-save-button">
                 <a id="save">Save Text To File for Download</a>
+                <button id= "saveTextButton" type="button"> Save Text</button>
             </div>
             <div class="textarea-wrapper">
                 <textarea name="text" class="session-storage" id="textArea" cols="50"
                     rows="10">Hello! I love JavaScript, and I prefer sessionStorage. How about you? 👍</textarea>
                 <button type="button" id="save-text">Save Text</button>
+                <button id="saveTextButton">Save Text</button>
             </div>
+            
+         
+
         </div>
     </div>
     <footer class="site-footer">
