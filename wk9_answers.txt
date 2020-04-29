@@ -39,21 +39,24 @@ impact of an XSS (Cross Site Scripting)
  What is that property called and what does it return? Use your project application to describe 
  what this property does.
 
-12. Give me the five Storage methods of the Web Storage API and describe what each does. 
-When applicable, use code from your project application as examples.
- 
+12. 
  - Storage.clear() : when invoked, will empty all keys out of storage
-    ex.
+    ex.   }
+    function clearStorage() {
+        const myStory = document.getElementById('textArea');
+        myStory.value = '';
+        sessionStorage.removeItem('autosave' , myStory.value); }
  
  - Storage.removeItem() : when passed a key name will remove that key from the storage. If not iten is associated with the given 
  key than this method will do nothing
-    ex.
+    ex.   sessionStorage.removeItem('autosave' , myStory.value); 
+}
 
  - Storage.setItem() : when passed a key name and value will add that key to the storage/update that key's value if it already exists.       
-    ex. 
+    ex. sessionStorage.setItem('autosave' , myStory
 
  - Storage.getItem() : when passed a key name will return that key's value or null is the key is non-existent
-   ex.
+   ex. (sessionStorage.getItem('autosave' , myStory)
 
 - Storage.key() : when passed a certain number represented by n, this method returns the name of the nth key in the storage.
     ex.      
@@ -78,8 +81,6 @@ When applicable, use code from your project application as examples.
 - Data is never transferred to the server
 - Storage limits are larger than cookies
 
-
-
 16. 
 - try...catch statement marks a block of statements to try out code and specifics a response if an 
 exception is thrown.
@@ -93,6 +94,8 @@ Because the exception needs to be catched. the try...catch statement must be use
 - JSON.stringify() method converts a JavaScript object or value to a JSON string. 
 const csv = JSON.stringify(sessionStorage['autosave']);
 
-19. Describe what the value of the csv variable is and why it is important for our application.
+19. the csv variable is new Blob(blobParts, options). 
+blobParts: an array of Blob, BufferSource, or String values. Our instance of Blob is a string value of type text/plain.
+options: an optional object. We use the type option in our instance of Blob.
 
 20. Please copy and paste the result of the console.log(csv) after you have clicked on the Save Text To File For Download button. Hint: you should try this out only after you have completed building your application.
