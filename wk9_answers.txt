@@ -8,7 +8,12 @@
 - Before HTML5 application data was stored in cookies, included in each server request.
 
 3. 
-- it provides for the addition, modification, deletion of stored data items. 
+Storage interface: permits you to set, retrieve, and remove data for a specific domain and storage type (local or session).
+
+- Window Interface: Web Storage API extends the global Window object with the Window.sessionStorage and Window.localStorage properties. 
+These properties provide access to the current domain session and local Storage objects. A Window.onstorage event handler fires when a storage type changes: when a new item is set or the data itself changes. We will be implementing an event listener and event in the 7th project for this course which is part of the Week 9 homework focusing on the Web Storage API, and specifically localStorage and sessionStorage.
+
+- StorageEvent Interface: the storage event is fired on a document's Window object when a storage type or data changes.
 
 4. 
 - localStorage And sessionStorage
@@ -29,8 +34,9 @@
 - the httpOnly flag is good for blocking access of a cookie from client side and JavaScript coded. It mitigates the negative 
 impact of an XSS (Cross Site Scripting) 
 
-9. What are localStorage and sessionStorage of the Web Storage API connected to?
- And what does that connection make possible for pages from the same origin to do?
+9. 
+ - Web Storage is connected to a specific origin domain & protocol
+ -  The connection makes it possible for all pages from one origin to store and access the same data.
 
 10. 
 - permits you to set, retrieve and remove data for a specific domain and storage type. 
@@ -39,21 +45,23 @@ impact of an XSS (Cross Site Scripting)
  What is that property called and what does it return? Use your project application to describe 
  what this property does.
 
-12. Give me the five Storage methods of the Web Storage API and describe what each does. 
-When applicable, use code from your project application as examples.
- 
+12. 
  - Storage.clear() : when invoked, will empty all keys out of storage
-    ex.
- 
+    ex.   }
+    function emptyStorage() {
+        const myStory = document.getElementById('textArea');
+        myStory.value = '';
+        sessionStorage.clear();
  - Storage.removeItem() : when passed a key name will remove that key from the storage. If not iten is associated with the given 
  key than this method will do nothing
-    ex.
+    ex.   sessionStorage.removeItem('autosave' , myStory.value); 
+}
 
  - Storage.setItem() : when passed a key name and value will add that key to the storage/update that key's value if it already exists.       
-    ex. 
+    ex. sessionStorage.setItem('autosave' , myStory)
 
  - Storage.getItem() : when passed a key name will return that key's value or null is the key is non-existent
-   ex.
+   ex. (sessionStorage.getItem('autosave' , myStory)
 
 - Storage.key() : when passed a certain number represented by n, this method returns the name of the nth key in the storage.
     ex.      
@@ -74,11 +82,8 @@ When applicable, use code from your project application as examples.
    in the browser console.
  - Storage limit is max 10MB vs session and cookies   
 
-15. What are the similarities between localStorage and sessionStorage?
-- Data is never transferred to the server
-- Storage limits are larger than cookies
-
-
+15. 
+- they permit you to set,retrieve adn remoce data for a specific domain
 
 16. 
 - try...catch statement marks a block of statements to try out code and specifics a response if an 
@@ -93,6 +98,10 @@ Because the exception needs to be catched. the try...catch statement must be use
 - JSON.stringify() method converts a JavaScript object or value to a JSON string. 
 const csv = JSON.stringify(sessionStorage['autosave']);
 
-19. Describe what the value of the csv variable is and why it is important for our application.
+19. the csv variable is new Blob(blobParts, options). 
+blobParts: an array of Blob, BufferSource, or String values. Our instance of Blob is a string value of type text/plain.
+options: an optional object. We use the type option in our instance of Blob.
+This is important b/c the sessionStorage/localStorage object's autosave property value needs to be taken and be extracted from sessionStorage/
+localStorage and transform the value into a string then can be inserted into a txt file. If we do not do this teh sessionStorage key is unreadable.
 
 20. Please copy and paste the result of the console.log(csv) after you have clicked on the Save Text To File For Download button. Hint: you should try this out only after you have completed building your application.
