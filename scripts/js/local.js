@@ -1,102 +1,69 @@
-const clearStorage = document.getElementbyId('clearStorage');{
-  document.addEventListener('click' , function(){
-      document.getElementById('clearStorage').innerHTML = 'I Work';
-  });
+const clearStorage = document.querySelector('.clear');
+const emptyStorage = document.querySelector('.empty');{
 
-const emptyStorage = document.getElementbyId('emptyStorage');{
-  document.addEventListener('click' , function(){
-      document.getElementById('emptyStorage').innerHTML = 'I Work';
-  });
-
-const storageQuotaMsg = document.getElementbyId('storageQuotaMsg');{
-  document.addEventListener('click' , function(){
-      document.getElementById('storageQuotaMsg').innerHTML = 'I Work';
-  });    
-
-const saveTextButton = document.getElementbyId('saveTextButton');{
-  document.addEventListener('click' , function(){
-      document.getElementById('saveTextButton').innerHTML = 'I Work';
-      console.log('Message saved to sessionStorage');
-  });
-
-const fileDownloadButton = document.getElementById('fileDowloadButton');{
-  document.getElementById('click' , function(){
-      document.getElementById('fileDownloadButton').innerHTML = 'i work';
-});
-
-
-const textField = document.getElementbyId('textField');{
-document.addEventListener('click' ,  function(){
-  document.getElementById('textField').innerHTML ='i work';
-});   
-
-
-
-
-function localStorageToFile(){
-const csv = JSON.stringify(sessionStorage['autosave']);
-  console.log(); 
-  
-  //Copy the redult on the Chrome Developer tools//
-
-const csvAsBlob = new Blob([csv], { type: "text/plain"});
-const fileNameToSaveAs = document.getElementById('session-storage.txt');
-
+const storageQuotaMsg = document.getElementbyId('storage-quota-msg');
+const saveTextButton = document.getElementbyId('save-text');
 const downloadLink = document.getElementById('save');
-  downloadLink.download = fileNameToSaveAs;
+const textField = document.getElementbyId('textArea');
 
-  const createObjectURL = URL.createObjectURL(object);   
 
-if (window.URL ! == null){
-  downloadLink.href = window.URL.createObjectURL(csvAsBlob);
-  downloadLink.target = '_blank';
-else {
-    downloadLink.window.URL.createObjectURL(csvAsBlob);
-    downloadLink.target = '_blank';
-    downloadLink.style.display = 'none';
-    document.body.appendChild(downloadLink.download);
-} 
-}
 
-function localStorageSupport(){
-  return typeof Storage !== 'undefined';
-}
+function localStorageToFile() {
+ const text = (sessionStorage['autosave']);
+    console.log(working);
+    
+    //Copy the redult on the Chrome Developer tools//
 
-function localStorageAndQuota(){
-  let myStory = document.getElementById('textArea').nodeValue;
-if (!sessionStorageSupport) {
-      storageQuotaMsg.innerHTML = 'Unsupported HTML5 session storage'
+ const blob = new Blob([text], { type: "text/plain" });
+ 
+if (window.URL ! == null) { 
+    downloadLink.href = window.URL.createObjectURL(blob);
+    downloadLink.download = 'storage.txt';
+    download.target = '_blank';
+
 } else {
-     try {
-       if (sessionStorage.getItem('autosave' , myStory)) {
-           myStory = sessionStorage.getItem('autosave', myStory);              
-} else { sessionStorage.setItem('autosave' , myStory);
-  }
-  catch (domException){
-      domException = new DOMException();
-     if (
-       domException.name === 'QUOTA EXCEEDED ERROR' 
-       domException.name === 'NS_ERROR_DOM_QUOTA_REACHED'
-     ) {
-        storageQuotaMsg.innerHTML = 'Session Storage Quota Exceeded';  
+      downloadLink.window.URL.createObjectURL(blob);
+      downloadLink.target = '_blank';
+      downloadLink.style.display = 'none';
+      document.body.appendChild(downloadLink.download);
+  } 
+}
+
+function localStorageSupport() {
+    return typeof Storage !== 'undefined';
+}
+
+function localStorageAndQuota() {
+ 
+  if (!localStorageSupport) {
+        storageQuotaMsg.innerHTML = 'Unsupported HTML5 session storage'
+  } else {
+    try { sessionStorage.setItem('autosave', textField.value);
+    } catch (error) { 
+       if (
+         error.name === 'QUOTA EXCEEDED ERROR' ||
+         error.name === 'NS_ERROR_DOM_QUOTA_REACHED'
+       ) {
+          storageQuotaMsg.innerHTML = 'Session Storage Quota Exceeded';  
+       }
      }
+   } 
   }
-} 
-}
-}
 
 function clearStorage() {
-const myStory = document.getElementById('textArea');
-myStory.value = '';
-sessionStorage.removeItem('autosave' , myStory.value); 
+  textField.value = '';
+  sessionStorage.removeItem('autosave' , myStory.value); 
 }
 
 function emptyStorage() {
-const myStory = document.getElementById('textArea');
-myStory.value = '';
-sessionStorage.clear();
-}
+  textField.value = '';
+  sessionStorage.clear();
 }
 
+clearStorageButton.addEventListener('click' ,clearStorage);
+emptyStorageButtom.addEventListener('click', emptyStorage);
 
+saveTextButton.addEventListener('click', localStorageAndQuota);
+textField.addEventListener('input', localStorageAndQuota);
+downloadLink.addEventListener('click', localStorageToFile);
 
